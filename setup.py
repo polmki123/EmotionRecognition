@@ -20,5 +20,8 @@ setuptools.setup(
         "Operating System :: OS Independent"
     ],
     python_requires='>=3.5.5',
-    install_requires=["numpy>=1.14.0", "pandas>=0.23.4", "tqdm>=4.30.0", "gdown>=3.10.1", "Pillow>=5.2.0", "opencv-python>=3.4.4", "tensorflow>=1.9.0", "keras>=2.2.0", "Flask>=1.1.2", "mtcnn>=0.1.0"]
+    install_requires=[  "numpy==1.19.3" ,"pandas==1.1.3", "tqdm>=4.30.0", "gdown>=3.10.1", 
+                        "Pillow>=5.2.0", "opencv-python>=3.4.4", "tensorflow-gpu==2.2.0", "keras>=2.2.0", 
+                        "keras-applications>=1.0.7", "Flask>=1.1.2", "mtcnn>=0.1.0", "cython", "scipy==1.4.1", 
+                        "astunparse", "h5py==2.10.0", "dlib" , "cmake"]
 )

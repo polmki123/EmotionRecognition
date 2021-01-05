@@ -9,6 +9,18 @@ from deepface import DeepFace
 from deepface.commons import functions
 import json
 import time
+import tensorflow as tf
+gpus = tf.config.experimental.list_physical_devices('GPU')
+if gpus:
+  try:
+    # Currently, memory growth needs to be the same across GPUs
+    for gpu in gpus:
+      tf.config.experimental.set_memory_growth(gpu, True)
+    logical_gpus = tf.config.experimental.list_logical_devices('GPU')
+    print(len(gpus), "Physical GPUs,", len(logical_gpus), "Logical GPUs")
+  except RuntimeError as e:
+    # Memory growth must be set before GPUs have been initialized
+    print(e)
 
 #-----------------------------------------
 
@@ -30,17 +42,17 @@ print("-----------------------------------------")
 
 print("Face detectors test")
 
-print("ssd detector")
-res = DeepFace.verify(dataset, detector_backend = 'ssd')
-print(res)
+# print("ssd detector")
+# res = DeepFace.verify(dataset, detector_backend = 'ssd')
+# print(res)
 
 print("opencv detector")
 res = DeepFace.verify(dataset, detector_backend = 'opencv')
 print(res)
 
-print("dlib detector")
-res = DeepFace.verify(dataset, detector_backend = 'dlib')
-print(res)
+# print("dlib detector")
+# res = DeepFace.verify(dataset, detector_backend = 'dlib')
+# print(res)
 
 print("mtcnn detector")
 res = DeepFace.verify(dataset, detector_backend = 'mtcnn')
