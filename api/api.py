@@ -124,11 +124,11 @@ def analyze():
 
 def analyzeWrapper(req, trx_id = 0):
 	resp_obj = jsonify({'success': False})
-
+	# print(req)
 	instances = []
 	if "img" in list(req.keys()):
 		raw_content = req["img"] #list
-
+		print("understand")
 		for item in raw_content: #item is in type of dict
 			instances.append(item)
 	
