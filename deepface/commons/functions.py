@@ -437,6 +437,7 @@ def preprocess_face(img, target_size=(224, 224), grayscale = False, enforce_dete
 	#img_path = copy.copy(img)
 	
 	#img might be path, base64 or numpy array. Convert it to numpy whatever it is.
+	# print("이미지 확인", img)
 	img = load_image(img)
 	base_img = img.copy()
 	

@@ -356,7 +356,6 @@ def analyze(img_path, actions = [], models = {}, enforce_detection = True
 	#for img_path in img_paths:
 	for j in global_pbar:
 		img_path = img_paths[j]
-
 		resp_obj = {}
 		
 		disable_option = False if len(actions) > 1 else True
