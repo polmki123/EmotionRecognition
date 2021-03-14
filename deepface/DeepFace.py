@@ -107,7 +107,7 @@ def analyze(img_path, actions = [], models = {}, enforce_detection = True
 
 	#if a specific target is not passed, then find them all
 	if len(actions) == 0:
-		actions= ['emotion', 'age', 'gender', 'race']
+		actions= ['emotion', 'age', 'gender']
 
 	#print("Actions to do: ", actions)
 
